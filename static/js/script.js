@@ -80,11 +80,11 @@ function showResult(data) {
     thead.innerHTML = `
         <tr>
             <th>Process ID</th>
-            <th>Arrival</th>
-            <th>Burst</th>
-            <th>Completion</th>
-            <th>Turnaround</th>
-            <th>Waiting</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+            <th>Completion Time</th>
+            <th>Turn Around Time</th>
+            <th>Waiting Time</th>
         </tr>`
     result_div.appendChild(h1);
     table.appendChild(thead);
@@ -108,7 +108,7 @@ function showResult(data) {
     const avgDiv = document.getElementById('averages');
         avgDiv.innerHTML = `
         <div class="alert alert-info">
-        <strong>Average Turnaround Time: </strong> ${data.results.avg_tat}<br>
+        <strong>Average Turn Around Time: </strong> ${data.results.avg_tat}<br>
         <strong>Average Waiting Time: </strong> ${data.results.avg_wt}
         </div>
         `;
