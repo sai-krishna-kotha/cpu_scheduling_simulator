@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cpu_scheduling_simulator
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn cpu_scheduling_simulator.wsgi"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: cpu_scheduling_simulator.settings
+      - key: PYTHON_VERSION
+        value: 3.11

@@ -1,0 +1,1 @@
+web: gunicorn cpu_scheduling_simulator.wsgi:application
