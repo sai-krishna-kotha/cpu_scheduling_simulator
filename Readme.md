@@ -1,60 +1,73 @@
-# 🧠 CPU Scheduling Algorithm Simulator (Django Web App)
+# CPU Scheduling Simulator
 
-This is a web-based simulator that demonstrates how different CPU scheduling algorithms work. Built using Django, it allows users to input process data, select a scheduling method, and view the results using visual Gantt charts and detailed tables.
+The **CPU Scheduling Simulator** is a web application built with Django that simulates **First-Come, First-Served (FCFS)** CPU scheduling. Users can input process details (Process ID, Arrival Time, Burst Time), and the app calculates the scheduling metrics, including waiting time, turnaround time, and completion time.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/tech-django-green" />
-  <img src="https://img.shields.io/badge/status-WIP-yellow" />
-</p>
+### **Demo**
 
----
-
-## 🚀 Features
-
-- 🔘 Simulate popular CPU scheduling algorithms:
-  - FCFS (First Come First Serve)
-  - SJF (Shortest Job First – Preemptive & Non-Preemptive)
-  - Priority Scheduling (Optional)
-  - Round Robin (with time quantum)
-- 🧾 Dynamic form to input process details
-- 📊 Visual output includes:
-  - Gantt chart representation
-  - Turnaround and waiting time for each process
-  - Average turnaround and waiting time
-- 🖥️ Clean, responsive interface with Bootstrap
-- ⚙️ Modular backend logic (easy to extend)
+You can access the live demo of the project at:  
+[**CPU Scheduling Simulator Demo**](https://cpu-scheduling-simulator.onrender.com/)
 
 ---
 
-## 📷 Demo
+### **Features**
 
-*Coming Soon:*
-
----
-
-## 🛠️ Tech Stack
-
-- **Backend**: Django (Python)
-- **Frontend**: HTML, Bootstrap
-- **Forms**: HTML + JS
+- **FCFS Algorithm**: The application uses the **First-Come, First-Served (FCFS)** scheduling algorithm to determine the execution order of processes.
+- **Interactive UI**: Users can input process details (Process ID, Arrival Time, and Burst Time).
+- **Calculations**: After inputting process data, the simulator calculates:
+  - **Completion Time**
+  - **Turnaround Time**
+  - **Waiting Time**
+- **Results Table**: Displays the calculated metrics for each process in an easy-to-read table.
 
 ---
 
-## 🧠 How It Works
+### **Main Logic**
 
-1. User inputs process data (PID, arrival time, burst time, etc.).
-2. Chooses a scheduling algorithm from the options provided.
-3. Backend processes the input and runs the selected scheduling logic.
-4. Output is generated showing:
-   - Process execution order (Gantt chart)
-   - Waiting and turnaround times for each process
-   - Averages for comparison
+1. **Input Data**: 
+   - The user provides the `Process ID`, `Arrival Time`, and `Burst Time` for each process.
+   
+2. **FCFS Scheduling**:
+   - The FCFS algorithm processes the input data sequentially, starting with the process that arrives first. The main logic involves:
+     - **Completion Time (CT)**: The time at which a process finishes execution.
+     - **Turnaround Time (TAT)**: The total time a process spends in the system, from arrival to completion.
+     - **Waiting Time (WT)**: The time a process spends waiting in the ready queue before being executed.
+
+3. **Displaying Results**: 
+   - After processing, the results (Completion Time, Turnaround Time, Waiting Time) are displayed in a table on the web page.
 
 ---
 
-## 🧪 Running Locally
+### **Technologies Used**
 
-1. **Clone the repository**
+- **Django**: Backend web framework for developing the application.
+- **Bootstrap**: Frontend framework for responsive design.
+- **JavaScript**: For dynamic interactions like updating the UI without reloading the page.
+- **Gunicorn**: WSGI server for running the application in production.
+
+---
+
+### **How to Run Locally**
+
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/cpu-scheduling-simulator.git
-   cd cpu-scheduling-simulator
+   git clone https://github.com/<your-user-name>/cpu_scheduling_simulator.git
+   cd cpu_scheduling_simulator
+2. **Set up Virtual Environment**:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate  # On Windows, use .venv\Scripts\activate
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+4. **Start the Serve**:
+   ```bash
+   python manage.py runserver
+5. **Visit the Application**:
+
+   Open your browser and navigate to [http://localhost:8000](http://localhost:8000) to use the CPU Scheduling Simulator.
+
+   
+6. **Deployment**:
+   
+   The application is deployed using Render. It is automatically updated with the latest changes from the GitHub repository.
+
