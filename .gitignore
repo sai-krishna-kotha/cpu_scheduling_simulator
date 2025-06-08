@@ -19,4 +19,4 @@ media/
 .env
 
 # Render build artifacts
-build.sh
+# build.sh
