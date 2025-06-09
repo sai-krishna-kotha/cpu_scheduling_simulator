@@ -8,7 +8,8 @@ You can access the live demo of the project at:
 [**CPU Scheduling Simulator Demo**](https://cpu-scheduling-simulator.onrender.com/)
 
 ---
-
+**Future Improvements**:
+- Soon I will implement the other algorithms 
 ### **Features**
 
 - **FCFS Algorithm**: The application uses the **First-Come, First-Served (FCFS)** scheduling algorithm to determine the execution order of processes.
