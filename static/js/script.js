@@ -112,6 +112,7 @@ function showResult(data) {
         <strong>Average Waiting Time: </strong> ${data.results.avg_wt}
         </div>
         `;
+    console.log("Results got successfully")
 }
 
 document.getElementById('my-form').addEventListener('submit', formHandler);

@@ -18,10 +18,11 @@ def get_result(request):
         results = convert_to_json(fcfs(pids, ats, bts))
         # print(f'{data}\n{pids}\n{ats}\n{bts}')
         # return render(request, "simulator/home.html", {"results": results})
+        print("\n\n\nResults Computed Successfully\n\n\n")
         return JsonResponse({'results':results})
 
 def convert_to_json(data):
-    print(data)
+    # print(data)
     processes = data['processes']
     n = len(processes)
     json_data = {
